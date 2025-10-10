@@ -1,0 +1,21 @@
+metadata
+
+configs:
+  - config_name: default
+    data_files:
+      - split: train
+        path: data/train-*
+dataset_info:
+  features:
+    - name: image
+      dtype: image
+    - name: class
+      dtype: string
+    - name: id
+      dtype: string
+  splits:
+    - name: train
+      num_bytes: 3879773546902
+      num_examples: 13153480
+  download_size: 3876745904054
+  dataset_size: 3879773546902
