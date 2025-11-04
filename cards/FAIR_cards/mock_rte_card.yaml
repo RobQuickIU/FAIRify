@@ -1,5 +1,6 @@
 metadata
 
+#Delete any unused or unnecessary fields. 
 system_stack
   - os:                       #e.g., ubuntu, rhcos
   - os_version:            
