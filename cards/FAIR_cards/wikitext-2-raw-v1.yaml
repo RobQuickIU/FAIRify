@@ -1,4 +1,22 @@
+metadata
 
+dataset_info:
+  features:
+    - name: text
+      dtype: string
+  splits:
+    - name: test
+      num_bytes: 1305088
+      num_examples: 4358
+    - name: train
+      num_bytes: 11061717
+      num_examples: 36718
+    - name: validation
+      num_bytes: 1159288
+      num_examples: 3760
+  download_size: 7747359
+  dataset_size: 13526093
+  
 # FAIRify Extension
   name: wikitext-2-raw-v1
   short_name: wikitext
