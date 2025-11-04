@@ -1,0 +1,5 @@
+
+# FAIRify Extension
+  name: wikitext-2-raw-v1
+  short_name: wikitext
+  tokenize_column: text
