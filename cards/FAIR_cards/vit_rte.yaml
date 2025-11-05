@@ -29,3 +29,4 @@ additional-packages
   - package: accelerate 
   - package: evaluate 
   - package: Pillow 
+executable: "python3 /data_prep.py"
