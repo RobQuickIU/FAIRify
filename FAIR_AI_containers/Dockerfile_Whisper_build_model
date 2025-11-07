@@ -1,0 +1,11 @@
+FROM python:3.12.3
+RUN apt update
+RUN apt install -y build-essential ffmpeg libsndfile1
+WORKDIR /app
+ENV VIRTUAL_ENV=/opt/venv
+RUN python -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+RUN pip install --no-cache-dir \
+	transformers 'datasets[audio]' accelerate soundfile librosa jiwer evaluate torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1
+COPY build.py /app/build.py
+CMD ["python", "build.py"]
