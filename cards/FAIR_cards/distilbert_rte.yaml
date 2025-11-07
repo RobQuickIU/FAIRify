@@ -9,8 +9,7 @@ system_stack
   - framework_version: 2.5.1+cu121
 compute_env
   - execution_mode: cpu 
-  - nodes: 32
-  - data_path: ~/data                
+  - nodes: 32            
 
 #FAIRify Extension
 additional-packages
