@@ -1,1 +1,23 @@
 metadata
+
+system_stack
+  - os: ubuntu                    
+  - os_version: 24.04            
+  - core-language: python          
+  - core-language_version: 3.12.3
+  - framework: torch      
+  - framework_version: 2.5.1+cu121
+compute_env
+  - execution_mode: cpu 
+  - nodes: 32
+  - data_path: ~/data                
+
+#FAIRify Extension
+additional-packages
+  - package: torch 
+  - package: torchvision 
+  - package_url: --index-url https://download.pytorch.org/whl/cpu 
+  - package: transformers 
+  - package: datasets 
+  - package: accelerate
+    - package_version: 0.26.0
