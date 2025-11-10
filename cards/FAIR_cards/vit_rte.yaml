@@ -18,8 +18,8 @@ hardware
   - gpu_driver_version: 535.247.01
   - cuda_version: 12.2
 disk
-  - capacity: 60GB
-  - free_space_on_startup: 48GB
+  - capacity: 59848952
+  - free_space_on_startup: 49478924
 
 #FAIRify Extension
 additional-packages
