@@ -11,12 +11,15 @@ compute_env
   - execution_mode: gpu 
   - nodes: 1
   - data_path: ~/data                
-hardware_minimum
+hardware
   - gpu_model: A100X-10C
   - gpu_vram: 48GB
   - gpu_driver: nvidia
   - gpu_driver_version: 535.247.01
   - cuda_version: 12.2
+disk
+  - capacity: 60GB
+  - free_space_on_startup: 48GB
 
 #FAIRify Extension
 additional-packages
