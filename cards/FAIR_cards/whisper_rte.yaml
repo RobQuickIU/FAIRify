@@ -18,4 +18,17 @@ hardware_minimum
   - gpu_driver_version: 535.247.01
   - cuda_version: 12.2
 
+  #FAIRify Extension
+additional-packages
+  - package: torch==2.5.1
+  - package: torchvision==0.20.1 
+  - package: torchaudio==2.5.1
+  - package: transformers 
+  - package: datasets[audio] 
+  - package: accelerate 
+  - package: evaluate 
+  - package: soundfile
+  - package: librosa
+  - package: jiwer
+
   
