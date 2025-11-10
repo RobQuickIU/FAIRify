@@ -172,3 +172,9 @@ pipeline_tag: automatic-speech-recognition
 license: apache-2.0
 
 #FAIRify Extension
+os_packages:
+  - build-essentials
+  - ffmpeg
+  - libsndfile1
+python__packages:
+  
