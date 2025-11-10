@@ -10,6 +10,9 @@ system_stack
 compute_env
   - execution_mode: cpu 
   - nodes: 32            
+disk
+  - capacity: 60GB
+  - free_space_on_startup: 48GB
 
 #FAIRify Extension
 additional-packages
