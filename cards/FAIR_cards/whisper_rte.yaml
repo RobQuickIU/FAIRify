@@ -12,8 +12,10 @@ compute_env
   - execution_mode: gpu 
   - nodes: 1                
 hardware_minimum
-  - gpu_model: 
-  - gpu_vram:
-  - gpu_driver:
-  - gpu_driver_version:
-  - cuda_version:
+  - gpu_model: A100X-10C
+  - gpu_vram: 48GB
+  - gpu_driver: nvidia
+  - gpu_driver_version: 535.247.01
+  - cuda_version: 12.2
+
+  
