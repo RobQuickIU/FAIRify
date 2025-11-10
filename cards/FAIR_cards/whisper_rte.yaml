@@ -17,7 +17,10 @@ hardware_minimum
   - gpu_driver: nvidia
   - gpu_driver_version: 535.247.01
   - cuda_version: 12.2
-
+disk
+  - capacity: 60GB
+  - free_space_on_startup: 48GB
+  
   #FAIRify Extension
 additional-packages
   - package: torch==2.5.1
