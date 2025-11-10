@@ -1,1 +1,230 @@
-placeholder
+metadata
+
+annotations_creators:
+  - crowdsourced
+  - machine-generated
+language_creators:
+  - crowdsourced
+  - machine-generated
+language:
+  - en
+license:
+  - cc-by-2.0
+  - cc-by-2.5
+  - cc-by-3.0
+  - cc-by-4.0
+  - cc-by-sa-3.0
+  - cc-by-sa-4.0
+multilinguality:
+  - monolingual
+size_categories:
+  - 1T<n
+source_datasets:
+  - original
+task_categories:
+  - automatic-speech-recognition
+task_ids: []
+pretty_name: People's Speech
+tags:
+  - robust-speech-recognition
+  - noisy-speech-recognition
+  - speech-recognition
+dataset_info:
+  - config_name: clean
+    features:
+      - name: id
+        dtype: string
+      - name: audio
+        dtype:
+          audio:
+            sampling_rate: 16000
+      - name: duration_ms
+        dtype: int32
+      - name: text
+        dtype: string
+    splits:
+      - name: train
+        num_bytes: 401733771186.124
+        num_examples: 1501271
+      - name: validation
+        num_bytes: 2459781412.24
+        num_examples: 18622
+      - name: test
+        num_bytes: 4324307722.96
+        num_examples: 34898
+    download_size: 398550700437
+    dataset_size: 408517860321.32404
+  - config_name: clean_sa
+    features:
+      - name: id
+        dtype: string
+      - name: audio
+        dtype:
+          audio:
+            sampling_rate: 16000
+      - name: duration_ms
+        dtype: int32
+      - name: text
+        dtype: string
+    splits:
+      - name: train
+        num_bytes: 75267509124.558
+        num_examples: 257093
+      - name: validation
+        num_bytes: 2075929254.254
+        num_examples: 18622
+      - name: test
+        num_bytes: 3894954757.41
+        num_examples: 34898
+    download_size: 72518549222
+    dataset_size: 81238393136.222
+  - config_name: dirty
+    features:
+      - name: id
+        dtype: string
+      - name: audio
+        dtype:
+          audio:
+            sampling_rate: 16000
+      - name: duration_ms
+        dtype: int32
+      - name: text
+        dtype: string
+    splits:
+      - name: train
+        num_bytes: 1569500875399.994
+        num_examples: 5476898
+      - name: validation
+        num_bytes: 2641406179.2539997
+        num_examples: 18622
+      - name: test
+        num_bytes: 5097236056.41
+        num_examples: 34898
+    download_size: 1496747948260
+    dataset_size: 1577239517635.6577
+  - config_name: dirty_sa
+    features:
+      - name: id
+        dtype: string
+      - name: audio
+        dtype:
+          audio:
+            sampling_rate: 16000
+      - name: duration_ms
+        dtype: int32
+      - name: text
+        dtype: string
+    splits:
+      - name: train
+        num_bytes: 163776914241.91
+        num_examples: 548014
+      - name: validation
+        num_bytes: 2075929254.254
+        num_examples: 18622
+      - name: test
+        num_bytes: 3894954757.41
+        num_examples: 34898
+    download_size: 149326092074
+    dataset_size: 169747798253.574
+  - config_name: microset
+    features:
+      - name: id
+        dtype: string
+      - name: audio
+        dtype:
+          audio:
+            sampling_rate: 16000
+      - name: duration_ms
+        dtype: int32
+      - name: text
+        dtype: string
+    splits:
+      - name: train
+        num_bytes: 92397066
+        num_examples: 336
+    download_size: 90204303
+    dataset_size: 92397066
+  - config_name: test
+    features:
+      - name: id
+        dtype: string
+      - name: audio
+        dtype:
+          audio:
+            sampling_rate: 16000
+      - name: duration_ms
+        dtype: int32
+      - name: text
+        dtype: string
+    splits:
+      - name: test
+        num_bytes: 3894954757.41
+        num_examples: 34898
+    download_size: 4087772459
+    dataset_size: 3894954757.41
+  - config_name: validation
+    features:
+      - name: id
+        dtype: string
+      - name: audio
+        dtype:
+          audio:
+            sampling_rate: 16000
+      - name: duration_ms
+        dtype: int32
+      - name: text
+        dtype: string
+    splits:
+      - name: validation
+        num_bytes: 2075929254.254
+        num_examples: 18622
+    download_size: 2335244149
+    dataset_size: 2075929254.254
+configs:
+  - config_name: clean
+    data_files:
+      - split: train
+        path: clean/train-*
+      - split: validation
+        path: clean/validation-*
+      - split: test
+        path: clean/test-*
+  - config_name: clean_sa
+    data_files:
+      - split: train
+        path: clean_sa/train-*
+      - split: validation
+        path: clean_sa/validation-*
+      - split: test
+        path: clean_sa/test-*
+  - config_name: dirty
+    data_files:
+      - split: train
+        path: dirty/train-*
+      - split: validation
+        path: dirty/validation-*
+      - split: test
+        path: dirty/test-*
+  - config_name: dirty_sa
+    data_files:
+      - split: train
+        path: dirty_sa/train-*
+      - split: validation
+        path: dirty_sa/validation-*
+      - split: test
+        path: dirty_sa/test-*
+  - config_name: microset
+    data_files:
+      - split: train
+        path: microset/train-*
+  - config_name: test
+    data_files:
+      - split: test
+        path: test/test-*
+  - config_name: validation
+    data_files:
+      - split: validation
+        path: validation/validation-*
+
+#FAIRify Extension
+dataset_name: MLCommons/peoples_speech
