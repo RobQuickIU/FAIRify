@@ -1,1 +1,19 @@
 metadata
+ 
+system_stack
+  - os: ubuntu
+  - os_version: 24.04            
+  - core-language: python       
+  - core-language_version: 3.12.3
+  - framework: torch
+  - framework_version: 2.5.1
+compute_env
+  - container_pid:
+  - execution_mode: gpu 
+  - nodes: 1                
+hardware_minimum
+  - gpu_model: 
+  - gpu_vram:
+  - gpu_driver:
+  - gpu_driver_version:
+  - cuda_version:
