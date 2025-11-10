@@ -1,0 +1,35 @@
+metadata
+
+annotations_creators:
+  - crowdsourced
+language_creators:
+  - crowdsourced
+language:
+  - en
+license:
+  - apache-2.0
+multilinguality: []
+size_categories:
+  - 1K<n<10K
+source_datasets:
+  - extended
+task_categories:
+  - image-classification
+task_ids: []
+paperswithcode_id: imagenette
+pretty_name: Imagenette
+
+#FAIRify Extension
+size:
+class_count: 10
+classes:
+  - tench
+  - "English springer"
+  - "cassette player"
+  - "chain saw"
+  - church
+  - "French horn"
+  - "garbage truck"
+  - "gas pump"
+  - "golf ball"
+  - parachute
