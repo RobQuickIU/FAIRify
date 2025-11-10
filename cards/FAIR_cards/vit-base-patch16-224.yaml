@@ -9,3 +9,13 @@ inference: false
 
 #FAIRify Extension
 name: vit-base-patch16-224
+additional-packages
+  - package: torch 
+  - package: torchvision 
+  - package: torchaudio 
+  - package_url: --index-url https://download.pytorch.org/whl/cu121 
+  - package: transformers 
+  - package: datasets 
+  - package: accelerate 
+  - package: evaluate 
+  - package: Pillow 
