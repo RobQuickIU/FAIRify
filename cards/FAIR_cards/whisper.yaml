@@ -188,4 +188,5 @@ python__packages:
   - librosa
   - jiwer
 model_name: openai/whisper-tiny
+test_inference_file: 
   
