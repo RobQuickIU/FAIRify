@@ -10,14 +10,14 @@ inference: false
 #FAIRify Extension
 name: vit-base-patch16-224
 python_packages:
-  - torch 
-      package_url: --index-url https://download.pytorch.org/whl/cu121 
-  - torchvision 
-      package_url: --index-url https://download.pytorch.org/whl/cu121 
-  - torchaudio 
-      package_url: --index-url https://download.pytorch.org/whl/cu121 
-  - transformers 
-  - datasets 
-  - accelerate 
-  - evaluate 
-  - Pillow 
+  - package: torch
+    package_url: --index-url https://download.pytorch.org/whl/cu121
+  - package: torchvision
+    package_url: --index-url https://download.pytorch.org/whl/cu121
+  - package: torchaudio
+    package_url: --index-url https://download.pytorch.org/whl/cu121
+  - package: transformers
+  - package: datasets
+  - package: accelerate
+  - package: evaluate
+  - package: Pillow
