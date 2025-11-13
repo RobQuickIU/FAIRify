@@ -42,67 +42,6 @@ def _normalize_yaml_text(raw_text: str) -> str:
         if stripped.startswith("-") and ":" not in stripped:
             indent = line[: line.find("-")]
             content = stripped[1:].strip()
-            if content and next_line.startswith(indent + "  ") and ":" in next_line:
-                processed.append(f"{indent}- package: {content}")
-            else:
-                processed.append(f"{indent}- {content!r}")
-            continue
-
-        # Fix nested "- package_version" style entries to valid mappings.
-        if stripped.startswith("- package_version:"):
-            indent = line[: line.find("-")]
-            processed.append(f"{indent}package_version:{line.split(':', 1)[1]}")
-            continue
-
-        processed.append(line)
-
-    return "\n".join(processed)
-
-
-# Retrieves yaml card from the file server and stores it in an object.
-
-import os
-import requests
-import yaml
-
-BASE_URL = "https://github.com/RobQuickIU/FAIRify/tree/main/cards/FAIR_cards"
-GITHUB_API_URL = (
-    "https://api.github.com/repos/RobQuickIU/FAIRify/contents/cards/FAIR_cards?ref=main"
-)
-
-
-def _normalize_yaml_text(raw_text: str) -> str:
-    """Clean up the raw text so YAML parsing is less brittle."""
-    if raw_text.startswith("\ufeff"):
-        raw_text = raw_text[1:]
-
-    normalized = raw_text.replace("\r\n", "\n").replace("\r", "\n").strip()
-    lines = normalized.split("\n")
-    if lines and lines[0].strip().lower() == "metadata":
-        idx = 1
-        while idx < len(lines) and not lines[idx].strip():
-            idx += 1
-        lines = lines[idx:]
-
-    processed = []
-    for idx, line in enumerate(lines):
-        stripped = line.strip()
-        next_line = lines[idx + 1] if idx + 1 < len(lines) else ""
-
-        # Auto-add missing ":" for keys that precede indented blocks/lists.
-        if (
-            stripped
-            and not stripped.startswith(("#", "-"))
-            and ":" not in stripped
-            and next_line.startswith((" ", "\t"))
-        ):
-            processed.append(f"{line}:")
-            continue
-
-        # Convert list scalars with nested metadata into dictionaries or quoted scalars.
-        if stripped.startswith("-") and ":" not in stripped:
-            indent = line[: line.find("-")]
-            content = stripped[1:].strip()
             nested_indent = indent + "  "
             if content and next_line.startswith(nested_indent) and ":" in next_line:
                 processed.append(f"{indent}- package: {content}")
