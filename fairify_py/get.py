@@ -151,7 +151,7 @@ def get_yaml_cards():
         entries = response.json()
 
         if not isinstance(entries, list):
-            print(f"❌ Unexpected GitHub response: {entries}")
+            print(f" Unexpected GitHub response: {entries}")
             return yaml_dict
 
         yaml_entries = [
@@ -169,14 +169,14 @@ def get_yaml_cards():
             download_url = item.get("download_url")
 
             if not download_url:
-                print(f"⚠️  Skipping {filename}; no download URL provided.")
+                print(f"  Skipping {filename}; no download URL provided.")
                 continue
 
             try:
                 file_response = requests.get(download_url, timeout=30)
                 file_response.raise_for_status()
             except requests.exceptions.RequestException as e:
-                print(f"❌ Failed to fetch {filename}: {e}")
+                print(f" Failed to fetch {filename}: {e}")
                 continue
 
             try:
@@ -184,27 +184,27 @@ def get_yaml_cards():
                 parsed_yaml = yaml.safe_load(yaml_text)
                 if parsed_yaml is not None:
                     yaml_dict[filename] = parsed_yaml
-                    print(f"✅ Successfully loaded: {filename}")
+                    print(f" Successfully loaded: {filename}")
                 else:
-                    print(f"⚠️  Warning: {filename} is empty or None")
+                    print(f"  Warning: {filename} is empty or None")
             except yaml.YAMLError as e:
-                print(f"❌ YAML parsing error for {filename}: {e}")
+                print(f" YAML parsing error for {filename}: {e}")
                 snippet = file_response.text.strip().split("\n")[:5]
                 print("   First 5 lines:")
                 for i, line in enumerate(snippet, 1):
                     print(f"   {i}: {repr(line[:80])}")
 
     except requests.exceptions.RequestException as e:
-        print(f"❌ Failed to fetch GitHub directory listing: {e}")
+        print(f" Failed to fetch GitHub directory listing: {e}")
     except Exception as e:
-        print(f"❌ Unexpected error: {e}")
+        print(f" Unexpected error: {e}")
 
     return yaml_dict
 
 
 if __name__ == "__main__":
     cards = get_yaml_cards()
-    print(f"\n📊 Summary: Retrieved {len(cards)} YAML cards")
+    print(f"\n Summary: Retrieved {len(cards)} YAML cards")
     if cards:
         print("Available cards:")
         for filename in cards.keys():
