@@ -28,7 +28,7 @@ def print_cards():
         print("No cards found.")
         return
     
-    print(f"📋 Available cards from server ({len(cards)}):")
+    print(f" Available cards from server ({len(cards)}):")
     for i, card in enumerate(cards, 1):
         print(f"  {i}. {card}")
 
