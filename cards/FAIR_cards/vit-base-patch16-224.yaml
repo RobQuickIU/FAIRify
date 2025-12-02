@@ -21,3 +21,8 @@ python_packages:
   - package: accelerate
   - package: evaluate
   - package: Pillow
+#Build Model
+build_executable: data_prep.py
+infer_executable: predict_only.py
+#Test Inference
+model_name: vit_best_fit.pth
