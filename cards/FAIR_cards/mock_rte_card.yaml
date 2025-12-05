@@ -8,14 +8,13 @@ system_stack
   - core-language_version:
   - framework:                #e.g., torch, tf
   - framework_version:
-  - dependency_file:          #e.g., evnironment.yml or requirements.txt
 compute_env
   - container_pid:
   - execution_mode:           #e.g., cpu, gpu, mpi, slurm 
   - nodes:
   - data_path:                
   - license-uri:
-hardware_minimum
+hardware
   - gpu_model:
   - gpu_vram:
   - gpu_driver:
