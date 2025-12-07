@@ -8,14 +8,14 @@ datasets:
 
 #FAIRify Extension
 name: distilbert-base-uncased
-additional-packages:
-  package: torch 
-  package: torchvision 
+additional-packages: # Defined as a List of package objects
+  - package: torch
+  - package: torchvision
     package_url: --index-url https://download.pytorch.org/whl/cpu
-  package: transformers
-  package: datasets
-  package: accelerate
+  - package: transformers
+  - package: datasets
+  - package: accelerate
     package_version: 0.26.0
-excutables:
+executables: # Key corrected and children indented
   build: build.py
   infer: infer.py
