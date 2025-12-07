@@ -1,13 +1,13 @@
-system_stack:
+system_stack: 
   os: ubuntu
   os_version: 24.04
   core-language: python
   core-language_version: 3.12.3
   framework: torch
   framework_version: 2.5.1+cu121
-compute_env:
+compute_env: 
   execution_mode: cpu
   nodes: 32
-disk:
+disk: 
   capacity: 59848952
   free_space_on_startup: 49478924
