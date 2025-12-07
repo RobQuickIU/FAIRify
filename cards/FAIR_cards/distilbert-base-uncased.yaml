@@ -1,5 +1,3 @@
-metadata
-
 language: en
 tags:
   - exbert
@@ -11,13 +9,13 @@ datasets:
 #FAIRify Extension
 name: distilbert-base-uncased
 additional-packages:
-  - package: torch 
-  - package: torchvision 
-  - package_url: --index-url https://download.pytorch.org/whl/cpu 
-  - package: transformers 
-  - package: datasets 
-  - package: accelerate
-    - package_version: 0.26.0
+  package: torch 
+  package: torchvision 
+    package_url: --index-url https://download.pytorch.org/whl/cpu 
+  package: transformers 
+  package: datasets 
+  package: accelerate
+    package_version: 0.26.0
 excutables:
-  - build: build.py
-  - infer: infer.py
+  build: build.py
+  infer: infer.py
