@@ -11,11 +11,11 @@ name: distilbert-base-uncased
 additional-packages:
   - package: torch 
   - package: torchvision 
-  package_url: --index-url https://download.pytorch.org/whl/cpu
+    package_url: --index-url https://download.pytorch.org/whl/cpu
   - package: transformers
   - package: datasets
   - package: accelerate
-  package_version: 0.26.0
+    package_version: 0.26.0
 executables:
   build: build.py
   infer: infer.py
