@@ -1,23 +1,23 @@
 metadata
 
-system_stack
+system_stack:
   - os: ubuntu                    
   - os_version: 24.04            
   - core-language: python          
   - core-language_version: 3.12.3
   - framework: torch      
   - framework_version: 2.5.1+cu121
-compute_env
+compute_env:
   - execution_mode: gpu 
   - nodes: 1
   - data_path: ~/data                
-hardware
+hardware:
   - gpu_model: A100X-10C
   - gpu_vram: 48GB
   - gpu_driver: nvidia
   - gpu_driver_version: 535.247.01
   - cuda_version: 12.2
-disk
+disk:
   - capacity: 59848952
   - free_space_on_startup: 49478924
 
