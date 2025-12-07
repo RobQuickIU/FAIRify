@@ -16,7 +16,7 @@ dataset_info:
       num_examples: 3760
   download_size: 7747359
   dataset_size: 13526093
-  
+
 # FAIRify Extension
   name: wikitext-2-raw-v1
   short_name: wikitext
