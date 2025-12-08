@@ -2,21 +2,21 @@ metadata
 
 #Delete any unused or unnecessary fields. 
 system_stack:
-  - os:                       #e.g., ubuntu, rhcos
-  - os_version:            
-  - core-language:          
-  - core-language_version:
-  - framework:                #e.g., torch, tf
-  - framework_version:
+  os:                       #e.g., ubuntu, rhcos
+  os_version:            
+  core-language:          
+  core-language_version:
+  framework:                #e.g., torch, tf
+  framework_version:
 compute_env:
-  - container_pid:
-  - execution_mode:           #e.g., cpu, gpu, mpi, slurm 
-  - nodes:
-  - data_path:                
-  - license-uri:
+  container_pid:
+  execution_mode:           #e.g., cpu, gpu, mpi, slurm 
+  nodes:
+  data_path:                
+  license-uri:
 hardware:
-  - gpu_model:
-  - gpu_vram:
-  - gpu_driver:
-  - gpu_driver_version:
-  - cuda_version:
+  gpu_model:
+  gpu_vram:
+  gpu_driver:
+  gpu_driver_version:
+  cuda_version:
